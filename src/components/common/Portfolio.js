@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import ProjectItem from './ProjectItem';
+import PortfolioItem from './PortfolioItem';
 import img1 from '../assets/img/portfolio/01-thumbnail.jpg';
 import img2 from '../assets/img/portfolio/02-thumbnail.jpg';
 import img3 from '../assets/img/portfolio/03-thumbnail.jpg';
@@ -16,18 +16,18 @@ const portfolio = [
     {title: 'Window', subtitle: 'Photography', image:img6}
 ];
 
-class Projects extends Component {
+class Portfolio extends Component {
     render() {
         return (
             <section className="page-section bg-light" id="portfolio">
                 <div className="container">
                     <div className="text-center">
-                        <h2 className="section-heading text-uppercase">Projects</h2>
+                        <h2 className="section-heading text-uppercase">Portfolio</h2>
                         <h3 className="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
                     </div>
                     <div className="row">
                         {portfolio.map((item, index) => {
-                            return <ProjectItem {...item} key={index} />
+                            return <PortfolioItem {...item} key={index} />
                         })}
                     </div>
                 </div>
@@ -36,4 +36,4 @@ class Projects extends Component {
     }
 }
 
-export default Projects;
+export default Portfolio;

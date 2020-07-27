@@ -20,9 +20,9 @@ class Team extends Component {
                         return <TeamMember {...member} key={index} />
                     })}
                 </div>
-                {/* <div className="row">
+                <div className="row">
                     <div className="col-lg-8 mx-auto text-center"><p className="large text-muted">Our team maybe small, but there is always room for you.</p></div>
-                </div> */}
+                </div>
             </div>
         </section>
         )

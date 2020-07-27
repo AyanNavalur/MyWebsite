@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
  
-class ProjectItem extends Component {
+class PortfolioItem extends Component {
     render() {
         return (
             <div className="col-lg-4 col-sm-6 mb-4">
@@ -21,4 +21,4 @@ class ProjectItem extends Component {
     }
 }
 
-export default ProjectItem;
+export default PortfolioItem;

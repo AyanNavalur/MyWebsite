@@ -10,7 +10,7 @@ import About from './components/pages/About';
 import Contact from './components/common/Contact';
 import Services from './components/common/Services';
 import Team from './components/common/Team';
-import Projects from './components/common/Projects';
+import Portfolio from './components/common/Portfolio';
 import Admin from './components/pages/Admin';
 
 function App() {
@@ -29,8 +29,8 @@ function App() {
         />
 
         <Route 
-          path="/projects"
-          component={Projects}
+          path="/portfolio"
+          component={Portfolio}
         />
 
         <Route 

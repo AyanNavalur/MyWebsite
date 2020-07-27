@@ -7,7 +7,7 @@ import Services from '../common/Services';
 import Team from '../common/Team';
 import Timeline from '../common/Timeline';
 import Contact from '../common/Contact';
-import Projects from '../common/Projects';
+import Portfolio from '../common/Portfolio';
 
 class Home extends Component {
     render() {
@@ -25,7 +25,7 @@ class Home extends Component {
 
                 <Services />
 
-                <Projects />
+                <Portfolio />
 
                 <Timeline />
                 
