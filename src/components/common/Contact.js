@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Field from './Field';
 import {withFormik} from 'formik';
 import * as Yup from 'yup';
+
 const fields = {
     sections: [
         [

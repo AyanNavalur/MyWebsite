@@ -1,8 +1,10 @@
 import React from 'react';
 import logo from './logo.svg';
-import PageWrapper from './components/PageWrapper';
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 import './App.css';
+
+import AdminWrapper from './components/AdminWrapper';
+import PageWrapper from './components/PageWrapper';
 
 //Pages
 import Home from './components/pages/Home';
@@ -12,43 +14,67 @@ import Services from './components/common/Services';
 import Team from './components/common/Team';
 import Portfolio from './components/common/Portfolio';
 import Admin from './components/pages/Admin';
+import Login from './components/pages/Login';
+
 
 function App() {
   return (
     <Router>
+
       <Route 
         path="/admin"
-        component={Admin}
+        render={props => (
+          <AdminWrapper>
+            <Login />
+          </AdminWrapper>
+        )}
       />
 
-      <PageWrapper>
         <Route 
           exact={true}
           path="/"
-          component={Home}
+          render={props => (
+            <PageWrapper>
+              <Home {...props} />
+            </PageWrapper>
+          )}
         />
 
         <Route 
           path="/portfolio"
-          component={Portfolio}
+          render={props => (
+            <PageWrapper>
+              <Portfolio {...props} />
+            </PageWrapper>
+          )}
         />
 
         <Route 
           path="/about"
-          component={About}
+          render={props => (
+            <PageWrapper>
+              <About {...props} />
+            </PageWrapper>
+          )}
         />
 
         <Route
         path="/contact"
-        component={Contact}
+        render={props => (
+          <PageWrapper>
+            <Contact {...props} />
+          </PageWrapper>
+        )}
         />
 
         <Route 
         path="/services"
-        component={Services}
+        render={props => (
+          <PageWrapper>
+            <Services {...props} />
+          </PageWrapper>
+        )}
         />
-      
-      </PageWrapper>
     </Router>
   );
 }
